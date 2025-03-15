@@ -1,22 +1,14 @@
-.main {
+main {
+  width: 100vw;
+  height: 100vh;
   font-family: "muli", sans-serif;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  background-color: #f7f8fc;
-}
-
-.div {
-  width: 100%;
-  height: 100vh;
-  position: relative;
+  background-color: pink;
 }
 
 .sidebar-desktop {
-  position: absolute;
   width: 255px;
-  height: 100%;
+  height: 100vh;
   background-color: #363740;
 }
 
@@ -26,21 +18,6 @@
   height: 32px;
   top: 37px;
   left: 32px;
-}
-.logo #circle {
-  position: absolute;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  background: #3751FF;
-}
-.logo #D {
-  position: absolute;
-  width: 12px;
-  height: 14px;
-  left: 30%;
-  top: 27%;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.659), rgb(255, 255, 255));
 }
 
 .title_D {
@@ -80,8 +57,7 @@
   margin-left: 32px;
   margin-right: 20px;
 }
-
-#div_R {
+.sidebar-list #div_R {
   background-color: rgba(223, 224, 235, 0.1529411765);
   width: 100%;
   height: 1px;
@@ -89,53 +65,38 @@
   margin-bottom: 22px;
 }
 
-.overlap {
-  position: absolute;
-  width: 1185;
-  left: 255px;
+.main-page {
+  width: 100%;
+  height: 100vh;
+  background-color: pink;
+  display: flex;
 }
-
-.header-default {
-  position: absolute;
-  top: 30px;
-  left: 30px;
+.main-page .header-default {
+  width: calc(100% - 255px);
+  position: fixed;
+  padding: 35px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
 }
-
-.title_1 {
+.main-page .title_1 {
   font-weight: 700;
   font-size: 24px;
   color: #252733;
 }
-
-#icon-search {
-  top: 14px;
-  left: 1060px;
-  position: absolute;
-  width: 16px;
-  height: 16px;
+.main-page .subheader-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
 }
-
-.vector {
-  position: absolute;
-  width: 14px;
-  height: 16px;
-  top: 14px;
-  left: 1100px;
-}
-
-.name {
-  position: absolute;
-  top: 12px;
-  left: 1230px;
-  font-size: 14px;
-  width: 105px;
-}
-
-.photo {
-  position: absolute;
+.main-page .subheader-icons .photo {
   width: 40px;
-  top: 0;
-  left: 1350px;
+  height: 40px;
+}
+.main-page .subheader-icons .name {
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=style.css.map */
