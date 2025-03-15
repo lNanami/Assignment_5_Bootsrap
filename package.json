@@ -1,7 +1,6 @@
 {
   "name": "assignment_5_bootsrap",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "lite-server --baseDir=\"public\"",
@@ -12,5 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "lite-server": "^2.6.1"
+  },
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
   }
 }
