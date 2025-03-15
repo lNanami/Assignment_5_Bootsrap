@@ -1,0 +1,163 @@
+// Defining the variables for reuse
+$font-family: "muli", sans-serif;
+$main-bg-color: #f7f8fc;
+$sidebar-bg-color: #363740;
+$highlight-bg-color: #9fa2b419;
+$light-gray: #A4A6B3;
+$blue-color: #3751FF;
+$light-blue: #dfe0eb27;
+$sidebar-item-color: #DDE2FF;
+
+// Main body
+.main {
+  font-family: $font-family;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  background-color: $main-bg-color;
+}
+
+// Main div (container sidebar)
+.div {
+  // background-color: var(--sidebar-bg);
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+// Sidebar
+.sidebar-desktop {
+  position: absolute;
+  width: 255px;
+  height: 100%;
+  background-color: $sidebar-bg-color;
+}
+
+// Logo
+.logo {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 37px;
+  left: 32px;
+
+  #circle {
+    position: absolute;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    background: $blue-color;
+  }
+
+  #D {
+    position: absolute;
+    width: 12px;
+    height: 14px;
+    left: 30%;
+    top: 27%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.659), rgb(255, 255, 255));
+  }
+}
+
+// Title
+.title_D {
+  font-weight: 700;
+  font-style: bold;
+  font-size: 19px;
+  color: $light-gray;
+  position: absolute;
+  top: 40px;
+  left: 76px;
+}
+
+// Sidebar list
+.sidebar-list {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: $sidebar-item-color;
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 200px;
+
+  li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 255px;
+    height: 56px;
+    left: 72px;
+    top: 128px;
+
+    #active {
+      background: $highlight-bg-color; // Highlighted item
+    }
+
+    .li_img {
+      width: 16px;
+      margin-left: 32px;
+      margin-right: 20px;
+    }
+  }
+}
+
+// Right section
+#div_R {
+  background-color: $light-blue;
+  width: 100%;
+  height: 1px;
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+
+// Search
+.overlap {
+  position: absolute;
+  width: 1185;
+  left: 255px;
+}
+
+.header-default {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.title_1 {
+  font-weight: 700;
+  font-size: 24px;
+  color: #252733;
+}
+
+#icon-search {
+  top: 14px;
+  left: 1060px;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+}
+
+.vector {
+  position: absolute;
+  width: 14px;
+  height: 16px;
+  top: 14px;
+  left: 1100px;
+}
+
+.name {
+  position: absolute;
+  top: 12px;
+  left: 1230px;
+  font-size: 14px;
+  width: 105px;
+}
+
+.photo {
+  position: absolute;
+  width: 40px;
+  top: 0;
+  left: 1350px;
+}
