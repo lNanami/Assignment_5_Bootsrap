@@ -1,9 +1,7 @@
 // Defining the variables for reuse
 $font-family: "muli", sans-serif;
-// $main-bg-color: #f7f8fc;
-$main-bg-color: pink;
+$main-bg-color: #f7f8fc;
 $sidebar-bg-color: #363740;
-$highlight-bg-color: #9fa2b419;
 $superlight-gray: #9fa2b4;
 $light-gray: #A4A6B3;
 $blue-color: #3751FF;
@@ -44,9 +42,12 @@ main {
   font-style: bold;
   font-size: $font-h2;
   color: $light-gray;
-  position: absolute;
-  top: 40px;
-  left: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: $padding-header 0;
+  gap: 10px;
 }
 
 // Sidebar list
@@ -54,30 +55,41 @@ main {
   font-weight: 400;
   font-style: normal;
   font-size: $font-h3;
-  color: $sidebar-item-color;
   width: 100%;
   list-style-type: none;
   padding: 0;
-  margin-top: 200px;
 
   // list sidebar
   li {
     display: flex;
     align-items: center;
     padding: 10px;
-    width: 255px;
-    height: 56px;
-    left: 72px;
-    top: 128px;
-
-    #active {
-      background: $highlight-bg-color; // Highlighted item
-    }
 
     .li_img {
       width: 16px;
       margin-left: 32px;
       margin-right: 20px;
+    }
+
+    // Highlighted item sidebar
+    &:hover {
+      // 8% opacity
+      background-color: rgba($superlight-gray, 0.08);
+      border-left: 3px solid $sidebar-item-color;
+      color: $sidebar-item-color !important;
+    }
+
+    &:hover .li_img {
+      color: $sidebar-item-color;
+    }
+
+    // hover on icon
+    svg {
+    transition: fill 0.1s ease;
+    } 
+    &:hover path {
+      // I changed svg hover color but its not the same as the text, why (?)
+      fill: rgba($sidebar-item-color, 1) !important;
     }
   }
 
@@ -100,6 +112,7 @@ main {
   height: 100vh;
   background-color: $main-bg-color;
   display: flex;
+  flex-direction: column;
 
 
   // Sub Header main page
@@ -144,29 +157,40 @@ main {
     display: flex;
     padding: 120px $padding-header;
     width: 100%;
-
-    // each card
-    .card-body {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
-
-      .card-title {
-        font-size: $font-h2;
-        color: $superlight-gray;
-        font-weight: $font-weight-bold;
+  
+    // Each card
+    .card {
+      transition: all 0.2s ease; // Smooth transition for hover effect
+      border-radius: 8px; // Optional: Add border radius if needed
+  
+      &:hover {
+        border: 2px solid $blue-color; // Change border color on hover
       }
-
-      .card-text {
-        font-size: 40px;
-        color: $superdark-blue;
-        font-weight: $font-weight-bold;
-      }
-
-      // hover active colour inside card
-      .active-hover {
-        color: $blue-color;
+  
+      .card-body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        transition: color 0.3s ease; // Smooth text color transition for the card body
+        
+        .card-title {
+          font-size: $font-h2;
+          color: $superlight-gray;
+          font-weight: $font-weight-bold;
+        }
+  
+        .card-text {
+          font-size: 40px;
+          color: $superdark-blue;
+          font-weight: $font-weight-bold;
+        }
+  
+        // Hover effect for text color inside the card body
+        &:hover .card-title,
+        &:hover .card-text {
+          color: $blue-color; // Change the text color when the card is hovered
+        }
       }
     }
   }
