@@ -106,7 +106,9 @@
           Articles
         </li>
         <!-- divisor -->
-        <div id="div_R"></div>
+        <svg width="255" height="2" viewBox="0 0 255 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path opacity="0.4" d="M0 1H255" stroke="rgba(159, 162, 180, 0.4)" />
+        </svg>
         <!-- settings logo -->
         <li style="color: #A4A6B3">
           <svg class="li_img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -161,7 +163,7 @@
       <!-- Section Cards -->
       <div class="row">
         <!-- card 1 -->
-        <div class="col-sm-3 mb-3 mb-sm-0">
+        <div class="col-sm-2 mb-3 mb-sm-0" style="padding: 0;">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Unresolved</h5>
@@ -171,7 +173,7 @@
         </div>
 
         <!-- card 2 -->
-        <div class="col-sm-3 mb-3 mb-sm-0">
+        <div class="col-sm-2 mb-3 mb-sm-0" style="padding: 0;">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Overdue</h5>
@@ -181,7 +183,7 @@
         </div>
 
         <!-- card 3 -->
-        <div class="col-sm-3 mb-3 mb-sm-0">
+        <div class="col-sm-2 mb-3 mb-sm-0" style="padding: 0;">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Open</h5>
@@ -191,7 +193,7 @@
         </div>
 
         <!-- card 4 -->
-        <div class="col-sm-3 mb-3 mb-sm-0">
+        <div class="col-sm-2 mb-3 mb-sm-0" style="padding: 0;">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">On hold</h5>
@@ -199,8 +201,8 @@
             </div>
           </div>
         </div>
-        
-      <!-- end of cards section -->
+
+        <!-- end of cards section -->
       </div>
 
 
@@ -214,9 +216,69 @@
         </div>
       </div>
 
+      <!-- Section Tickets & Tasks -->
+      <div class="tickets-tasks">
+
+        <!-- Section Unresolved Tickets -->
+        <div class="card" style="width: 50%;">
+          <div class="card-body-title">
+            <div class="card-body">
+              <h5 class="card-title">Unresolved tickets</h5>
+              <p class="card-text">View details</p>
+            </div>
+            <h5>Group: <span>Support</span></h5>
+          </div>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Waiting on Feature Request
+              <span class="badge bg-primary rounded-pill">4238</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Awaiting Customer Response
+              <span class="badge bg-primary rounded-pill">1005</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Awaiting Developer Fix
+              <span class="badge bg-primary rounded-pill">914</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" style="border: none;">
+              Pending
+              <span class="badge bg-primary rounded-pill">281</span>
+            </li>
+          </ul>
+        </div>
 
 
 
+
+
+
+
+        <!-- Section Tasks -->
+        <ul class="list-group">
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+            First checkbox
+          </li>
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+            Second checkbox
+          </li>
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+            Third checkbox
+          </li>
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+            Fourth checkbox
+          </li>
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+            Fifth checkbox
+          </li>
+        </ul>
+
+      </div>
 
 
 
