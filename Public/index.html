@@ -220,7 +220,7 @@
       <div class="tickets-tasks">
 
         <!-- Section Unresolved Tickets -->
-        <div class="card" style="width: 50%;">
+        <div class="card card-ticket" style="width: 50%;">
           <div class="card-body-title">
             <div class="card-body">
               <h5 class="card-title">Unresolved tickets</h5>
@@ -249,35 +249,60 @@
         </div>
 
 
+        <!-- Section TASKS -->
+        <div class="card card-ticket card-task" style="width: 50%;">
+          <!-- title card -->
+          <div class="card-body-title">
+            <div class="card-body">
+              <h5 class="card-title">Tasks</h5>
+              <p class="card-text">View all</p>
+            </div>
+            <h5>Today</h5>
+          </div>
+          <!-- list of items task -->
+          <ul class="list-group">
+
+            <!-- title create new task -->
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span style="color: #c5c7cd">Create new task</span>
+              <span class="badge bg-primary rounded-pill">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="8" fill="#F0F1F7" />
+                  <path d="M12 7V17" stroke="#9FA2B4" stroke-width="2" stroke-linecap="round" />
+                  <path d="M17 12L7 12" stroke="#9FA2B4" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </span>
+            </li>
+
+            <!-- tasks -->
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <div class="task-input">
+                <input id="urgent" type="radio" name="contact">
+                Finish ticket update
+              </div>
+              <button class="rounded-pill" style="background-color: #fec400;min-width: 100px; ">urgent</button>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <div class="task-input">
+                <input id="new" type="radio" name="contact">
+                Create new ticket example
+              </div>
+              <button class="rounded-pill" style="background-color: #29cc97; min-width: 100px;">new</button>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-center" style="border: none;">
+              <div class="task-input">
+                <input id="default" type="radio" name="contact">
+                Update ticket report
+              </div>
+              <button class="rounded-pill" style="background-color: #f0f1f7; min-width: 100px; color: #9fa2b4;">urgent</button>
+            </li>
+          </ul>
+        </div>
 
 
-
-
-
-        <!-- Section Tasks -->
-        <ul class="list-group">
-          <li class="list-group-item">
-            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-            First checkbox
-          </li>
-          <li class="list-group-item">
-            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-            Second checkbox
-          </li>
-          <li class="list-group-item">
-            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-            Third checkbox
-          </li>
-          <li class="list-group-item">
-            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-            Fourth checkbox
-          </li>
-          <li class="list-group-item">
-            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-            Fifth checkbox
-          </li>
-        </ul>
-
+        <!-- end of tickets & tasks -->
       </div>
 
 

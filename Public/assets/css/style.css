@@ -138,63 +138,93 @@ main {
   flex-direction: row;
   gap: 40px;
 }
-.main-page .tickets-tasks .card {
+.main-page .tickets-tasks .card-ticket {
   padding: 35px;
   border-radius: 8px;
 }
-.main-page .tickets-tasks .card .list-group {
+.main-page .tickets-tasks .card-ticket .list-group {
   border: none;
 }
-.main-page .tickets-tasks .card .list-group-item {
+.main-page .tickets-tasks .card-ticket .list-group-item {
   border-top: none;
   border-left: none;
   border-right: none;
   padding: 17.5px;
 }
-.main-page .tickets-tasks .card .card-body-title {
+.main-page .tickets-tasks .card-ticket .card-body-title {
   padding: 17.5px 17.5px 35px 17.5px;
 }
-.main-page .tickets-tasks .card .card-body-title h5 {
+.main-page .tickets-tasks .card-ticket .card-body-title h5 {
   font-size: 12px;
   color: #9fa2b4;
   font-weight: 500;
 }
-.main-page .tickets-tasks .card .card-body-title h5 span {
+.main-page .tickets-tasks .card-ticket .card-body-title h5 span {
   color: rgba(37, 39, 51, 0.8);
   font-weight: 600;
 }
-.main-page .tickets-tasks .card .card-body-title .card-body {
+.main-page .tickets-tasks .card-ticket .card-body-title .card-body {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0;
 }
-.main-page .tickets-tasks .card .card-body-title .card-body h5 {
+.main-page .tickets-tasks .card-ticket .card-body-title .card-body h5 {
   font-size: 19px;
   color: #252733;
   font-weight: 700;
 }
-.main-page .tickets-tasks .card .card-body-title .card-body p {
+.main-page .tickets-tasks .card-ticket .card-body-title .card-body p {
   font-size: 14px;
   color: #3751FF;
 }
-.main-page .tickets-tasks .card ul span {
+.main-page .tickets-tasks .card-ticket ul li {
+  font-size: 14px;
+}
+.main-page .tickets-tasks .card-ticket ul span {
   font-size: 14px;
   color: #9fa2b4;
   background-color: transparent !important;
   font-weight: unset;
 }
-.main-page .tickets-tasks .card ul li:hover {
+.main-page .tickets-tasks .card-ticket ul li:hover {
   color: #f7f8fc;
   background-color: #3751FF !important;
   font-weight: 700;
   border-radius: 20px;
   border: none;
 }
-.main-page .tickets-tasks .card ul li:hover span {
+.main-page .tickets-tasks .card-ticket ul li:hover span {
   color: #f7f8fc;
   background-color: #3751FF !important;
   font-weight: 700;
+}
+.main-page .tickets-tasks .card-task ul li .task-input {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.main-page .tickets-tasks .card-task ul li .rounded-pill {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #f7f8fc;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  border-radius: 8px;
+  border: none;
+  padding: 5px 20px;
+}
+.main-page .tickets-tasks .card-task ul li:hover {
+  color: initial;
+  background-color: transparent !important;
+  font-weight: initial;
+  border-radius: initial;
+  border: initial !important;
+}
+.main-page .tickets-tasks .card-task ul li:hover span {
+  color: initial;
+  background-color: transparent !important;
+  font-weight: initial;
 }
 
 /*# sourceMappingURL=style.css.map */

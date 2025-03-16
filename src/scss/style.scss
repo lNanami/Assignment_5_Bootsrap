@@ -22,6 +22,7 @@ $font-weight-bold: 700;
 // padding & gap
 $padding-header: 35px;
 $gap-icons: 20px;
+$border-radius: 8px;
 
 
 
@@ -169,7 +170,7 @@ main {
   // Each card
   .card {
     transition: all 0.2s ease; // Smooth transition for hover effect
-    border-radius: 8px; // Optional: Add border radius if needed
+    border-radius: $border-radius; // Optional: Add border radius if needed
 
     &:hover {
       border: 2px solid $blue-color; // Change border color on hover
@@ -216,9 +217,9 @@ main {
 
 
   // Section Unresolved Tickets
-  .card {
+  .card-ticket {
     padding: $padding-header;
-    border-radius: 8px;
+    border-radius: $border-radius;
 
     .list-group {
       border: none;
@@ -268,6 +269,10 @@ main {
 
   // List unresolved tickets
   ul {
+    li {
+      font-size: $font-h4;
+    }
+
     // left side numbers defining pattern
     span {
       font-size: $font-h4;
@@ -275,6 +280,7 @@ main {
       background-color: transparent !important;
       font-weight: unset;
     }
+
     // when hovering text list
     li:hover {
       color: $main-bg-color;
@@ -289,6 +295,49 @@ main {
         font-weight: 700;
       }
     }
+  }
+}
+
+// Section Tasks
+.card-task {
+  ul {
+    li {
+      .task-input {
+        display: flex;
+        gap: $gap-icons;
+        align-items: center;
+      }
+      .rounded-pill {
+        text-transform: uppercase;
+        font-weight: $font-weight-bold;
+        color: $main-bg-color;
+        font-size: 11px;
+        letter-spacing: 0.5px;
+        border-radius: $border-radius;
+        border: none;
+        padding: 5px 20px;
+      }
+    }
+
+
+
+
+    // Remove hover effect for list items inside card-task
+    li:hover {
+      color: initial;
+      background-color: transparent !important;
+      font-weight: initial;
+      border-radius: initial;
+      border: initial !important;
+
+      span {
+        color: initial;
+        background-color: transparent !important;
+        font-weight: initial;
+      }
+    }
+
+
   }
 }
 }
