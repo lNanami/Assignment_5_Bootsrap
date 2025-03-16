@@ -90,5 +90,29 @@ main {
 .main-page .subheader-icons .name {
   font-size: 14px;
 }
+.main-page .row {
+  display: flex;
+  padding: 120px 35px;
+  width: 100%;
+}
+.main-page .row .card-body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-page .row .card-body .card-title {
+  font-size: 19px;
+  color: #9fa2b4;
+  font-weight: 700;
+}
+.main-page .row .card-body .card-text {
+  font-size: 40px;
+  color: #252733;
+  font-weight: 700;
+}
+.main-page .row .card-body .active-hover {
+  color: #3751FF;
+}
 
 /*# sourceMappingURL=style.css.map */
