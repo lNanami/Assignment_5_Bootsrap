@@ -12,14 +12,6 @@ main {
   background-color: #363740;
 }
 
-.logo {
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  top: 37px;
-  left: 32px;
-}
-
 .title_D {
   font-weight: 700;
   font-style: bold;
