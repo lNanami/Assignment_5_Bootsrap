@@ -53,7 +53,7 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: $padding-header 0;
+  padding: $padding-header 0 calc($padding-header * 1.5) 0;
   gap: 10px;
 }
 
@@ -70,7 +70,7 @@ main {
   li {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: calc($padding-header / 2);
     box-sizing: border-box;
     border-left: 3px solid transparent;
 
@@ -245,6 +245,11 @@ main {
           font-weight: $font-weight-bold;
           color: $superdark-blue;
           margin: 0;
+
+          // Hover effect for text color
+          &:hover {
+            color: $blue-color !important;
+          }
         }
 
         .text-muted {
@@ -271,6 +276,11 @@ main {
             color: $superlight-gray;
             letter-spacing: 0.1px;
             margin: 0;
+
+            // Hover effect for text color
+            &:hover {
+              color: $blue-color !important;
+            }
           }
         }
       }
@@ -307,6 +317,12 @@ main {
           // to force centralize
           display: flex;
           justify-content: center !important;
+        }
+
+        // Hover effect for text color
+        &:hover .text-muted,
+        &:hover .text-end {
+          color: $blue-color !important;
         }
       }
 
@@ -350,6 +366,24 @@ main {
       border-left: none;
       border-right: none;
       padding: calc($padding-header / 2);
+
+
+      // Hover effect on the create new task list item
+      &:hover {
+        span {
+          color: $blue-color !important;
+        }
+      }
+
+      // hover on svg
+      &:hover {
+        svg rect {
+          fill: $blue-color !important;
+        }
+        svg path {
+          stroke: white;
+        }
+      }
     }
 
     .card-body-title {
@@ -361,6 +395,11 @@ main {
       font-size: $font-h5;
       color: $superlight-gray;
       font-weight: 500;
+
+      // Hover effect for text color
+      &:hover {
+        color: $blue-color !important;
+      }
 
       span {
         color: rgba($superdark-blue, 0.8);
@@ -383,6 +422,13 @@ main {
       p {
         font-size: $font-h4;
         color: $blue-color;
+        padding: 7px 12px;
+        border-radius: 50px;
+
+        &:hover {
+          color: white;
+          background-color: $blue-color;
+        }
       }
     }
   }
@@ -422,10 +468,20 @@ main {
 .card-task {
   ul {
     li {
+
+
+
       .task-input {
         display: flex;
         gap: $gap-icons;
         align-items: center;
+
+        // rounded input selection
+        .form-check-input {
+          width: 20px;
+          height: 20px;
+          border-radius: 50px;
+        }
       }
 
       .rounded-pill {
@@ -438,27 +494,51 @@ main {
         border: none;
         padding: 5px 20px;
       }
-    }
 
-    // Remove hover effect for list items inside card-task
-    // why border is still hovering (?)
-    li:hover {
-      color: initial;
-      background-color: transparent !important;
-      font-weight: initial;
-      border-radius: initial;
-      border: initial !important;
-
-      span {
+      // Remove hover effect for list items inside card-task
+      // why border is still hovering (?)
+      &:hover {
         color: initial;
         background-color: transparent !important;
         font-weight: initial;
+        border-radius: initial;
+        border-bottom: 1px solid #dfe0eb;
+
+        span {
+          color: initial;
+          background-color: transparent !important;
+          font-weight: initial;
+        }
+      }
+
+      // hovering buttons
+      // Mixin for hover button effect
+      @mixin hover-effect($bg-color, $color) {
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: lighten($bg-color, 15%) !important;
+          color: $color !important;
+        }
+      }
+
+      #hover-roundedbutton-1 {
+        @include hover-effect(#fec400, $superdark-blue);
+      }
+
+      #hover-roundedbutton-2 {
+        @include hover-effect(#29cc97, $superdark-blue);
+      }
+
+      #hover-roundedbutton-3 {
+        @include hover-effect(#c2c2c2, $superdark-blue);
       }
     }
   }
 }
 }
 }
+
 
 
 // MEDIA SCREEN
