@@ -101,35 +101,40 @@ main {
 }
 .main-page .row {
   display: flex;
-  padding: 120px 0;
+  padding: 120px 0 0 0;
   width: 100%;
-  gap: 40px;
+  margin: 0;
+  gap: 25px;
 }
-.main-page .row .card {
+.main-page .row .col-3 {
+  flex: 1 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+}
+.main-page .row .col-3 .card {
   transition: all 0.2s ease;
   border-radius: 8px;
 }
-.main-page .row .card:hover {
+.main-page .row .col-3 .card:hover {
   border: 2px solid #3751FF;
 }
-.main-page .row .card .card-body {
+.main-page .row .col-3 .card .card-body {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   transition: color 0.3s ease;
 }
-.main-page .row .card .card-body .card-title {
+.main-page .row .col-3 .card .card-body .card-title {
   font-size: 19px;
   color: #9fa2b4;
   font-weight: 700;
 }
-.main-page .row .card .card-body .card-text {
+.main-page .row .col-3 .card .card-body .card-text {
   font-size: 40px;
   color: #252733;
   font-weight: 700;
 }
-.main-page .row .card .card-body:hover .card-title, .main-page .row .card .card-body:hover .card-text {
+.main-page .row .col-3 .card .card-body:hover .card-title, .main-page .row .col-3 .card .card-body:hover .card-text {
   color: #3751FF;
 }
 .main-page .graphic-container .row {
@@ -308,6 +313,31 @@ main {
   color: initial;
   background-color: transparent !important;
   font-weight: initial;
+}
+
+@media (max-width: 1450px) {
+  .graphic-image {
+    width: 600px;
+    height: auto;
+  }
+}
+@media (max-width: 1300px) {
+  .graphic-image {
+    width: 500px;
+    height: auto;
+  }
+}
+@media (max-width: 1150px) {
+  .graphic-image {
+    width: 400px;
+    height: auto;
+  }
+}
+@media (max-width: 1000px) {
+  .graphic-image {
+    width: 300px;
+    height: auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

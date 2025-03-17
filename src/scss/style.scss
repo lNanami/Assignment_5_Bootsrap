@@ -163,42 +163,49 @@ main {
 // Section cards
 .row {
   display: flex;
-  padding: 120px 0;
+  padding: 120px 0 0 0;
   width: 100%;
-  gap: calc($gap-icons * 2);
+  margin: 0;
+  gap: 25px;
 
   // Each card
-  .card {
-    transition: all 0.2s ease; // Smooth transition for hover effect
-    border-radius: $border-radius; // Optional: Add border radius if needed
+  .col-3 {
+    flex: 1 1 calc(25% - 20px); // Adjust width dynamically
+    max-width: calc(25% - 20px); // Keeps them inside the row
 
-    &:hover {
-      border: 2px solid $blue-color; // Change border color on hover
-    }
+    // Each card subclass
+    .card {
+      transition: all 0.2s ease; // Smooth transition for hover effect
+      border-radius: $border-radius; // Optional: Add border radius if needed
 
-    .card-body {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
-      transition: color 0.3s ease; // Smooth text color transition for the card body
-
-      .card-title {
-        font-size: $font-h2;
-        color: $superlight-gray;
-        font-weight: $font-weight-bold;
+      &:hover {
+        border: 2px solid $blue-color; // Change border color on hover
       }
 
-      .card-text {
-        font-size: 40px;
-        color: $superdark-blue;
-        font-weight: $font-weight-bold;
-      }
+      .card-body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        transition: color 0.3s ease; // Smooth text color transition for the card body
 
-      // Hover effect for text color inside the card body
-      &:hover .card-title,
-      &:hover .card-text {
-        color: $blue-color; // Change the text color when the card is hovered
+        .card-title {
+          font-size: $font-h2;
+          color: $superlight-gray;
+          font-weight: $font-weight-bold;
+        }
+
+        .card-text {
+          font-size: 40px;
+          color: $superdark-blue;
+          font-weight: $font-weight-bold;
+        }
+
+        // Hover effect for text color inside the card body
+        &:hover .card-title,
+        &:hover .card-text {
+          color: $blue-color; // Change the text color when the card is hovered
+        }
       }
     }
   }
@@ -239,6 +246,7 @@ main {
           color: $superdark-blue;
           margin: 0;
         }
+
         .text-muted {
           font-size: $font-h5;
           color: $superlight-gray;
@@ -257,13 +265,13 @@ main {
           gap: $gap-icons;
           align-items: center;
 
-        p {
-          display: flex;
-          font-size: $font-h5;
-          color: $superlight-gray;
-          letter-spacing: 0.1px;
-          margin: 0;
-         }
+          p {
+            display: flex;
+            font-size: $font-h5;
+            color: $superlight-gray;
+            letter-spacing: 0.1px;
+            margin: 0;
+          }
         }
       }
     }
@@ -291,6 +299,7 @@ main {
           display: flex;
           justify-content: center !important;
         }
+
         .text-end {
           font-size: $font-h1;
           font-weight: $font-weight-bold;
@@ -300,11 +309,12 @@ main {
           justify-content: center !important;
         }
       }
-      
+
       // row padding borders zero
       .padding-zero-top {
         padding-top: 0 !important;
       }
+
       .padding-zero-bottom {
         padding-bottom: 0 !important;
       }
@@ -448,4 +458,35 @@ main {
   }
 }
 }
+}
+
+
+// MEDIA SCREEN
+// change graphic size on smaller screens
+@media (max-width: 1450px) {
+  .graphic-image {
+    width: 600px;
+    height: auto;
+  }
+}
+
+@media (max-width: 1300px) {
+  .graphic-image {
+    width: 500px;
+    height: auto;
+  }
+}
+
+@media (max-width: 1150px) {
+  .graphic-image {
+    width: 400px;
+    height: auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  .graphic-image {
+    width: 300px;
+    height: auto;
+  }
 }
