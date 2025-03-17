@@ -206,6 +206,116 @@ main {
 
 
 // Section Today's trend graphic
+.graphic-container {
+
+  // intire card row
+  .row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+    padding: $padding-header;
+    padding-right: 0;
+    margin: 0;
+
+
+    // left column: chart
+    .graphic-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      padding-bottom: $padding-header;
+
+      // title & subtitle graphic
+      .title-graphic {
+        display: flex;
+        flex-direction: column;
+        gap: calc($gap-icons / 2);
+
+        h5 {
+          font-size: $font-h2;
+          font-weight: $font-weight-bold;
+          color: $superdark-blue;
+          margin: 0;
+        }
+        .text-muted {
+          font-size: $font-h5;
+          color: $superlight-gray;
+          margin: 0;
+        }
+      }
+
+      // today & yesterday legend graphic
+      .legend-graphic {
+        display: flex;
+        align-items: center;
+        gap: calc($gap-icons * 2);
+
+        .legend-graphic-sub {
+          display: flex;
+          gap: $gap-icons;
+          align-items: center;
+
+        p {
+          display: flex;
+          font-size: $font-h5;
+          color: $superlight-gray;
+          letter-spacing: 0.1px;
+          margin: 0;
+         }
+        }
+      }
+    }
+
+    // right column: stats
+    .graphic-data {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+
+      .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: calc($padding-header / 2) 0;
+
+        .text-muted {
+          font-size: $font-h3;
+          color: $superlight-gray !important;
+          letter-spacing: 0.3px;
+          // to force centralize
+          display: flex;
+          justify-content: center !important;
+        }
+        .text-end {
+          font-size: $font-h1;
+          font-weight: $font-weight-bold;
+          color: $superdark-blue;
+          // to force centralize
+          display: flex;
+          justify-content: center !important;
+        }
+      }
+      
+      // row padding borders zero
+      .padding-zero-top {
+        padding-top: 0 !important;
+      }
+      .padding-zero-bottom {
+        padding-bottom: 0 !important;
+      }
+    }
+  }
+}
+
+
+
+
+
 
 
 // Section Tickets & Tasks
@@ -307,6 +417,7 @@ main {
         gap: $gap-icons;
         align-items: center;
       }
+
       .rounded-pill {
         text-transform: uppercase;
         font-weight: $font-weight-bold;
@@ -319,10 +430,8 @@ main {
       }
     }
 
-
-
-
     // Remove hover effect for list items inside card-task
+    // why border is still hovering (?)
     li:hover {
       color: initial;
       background-color: transparent !important;
@@ -336,8 +445,6 @@ main {
         font-weight: initial;
       }
     }
-
-
   }
 }
 }
