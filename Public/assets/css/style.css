@@ -396,19 +396,47 @@ main {
   .sidebar-desktop {
     display: none;
   }
+  .title_1 {
+    font-size: 20px !important;
+  }
+  .title_D {
+    font-size: 18px !important;
+  }
+  .card-title {
+    font-size: 8px !important;
+  }
+  .text-muted {
+    font-size: 10px !important;
+  }
+  .main-page .row .col-3 .card .card-body .card-text {
+    font-size: 30px !important;
+  }
+  .text-end {
+    font-size: 20px !important;
+  }
   .main-page {
     width: 100%;
     height: 100%;
     padding-left: 35px;
     padding-right: 35px;
   }
-  .header-default {
-    width: 100%;
-    padding: 35px;
-    gap: 200px;
-  }
   .row {
-    height: auto;
+    width: auto;
+  }
+  .header-default {
+    gap: 40px;
+  }
+  .subheader-icons {
+    gap: 10px !important;
+  }
+  .name {
+    font-size: 10px !important;
+  }
+  .main-page .graphic-container .row {
+    padding: 25px;
+  }
+  p {
+    font-size: 10px !important;
   }
   .graphic-container .row {
     display: flex;
@@ -419,10 +447,17 @@ main {
   .col-md-4 {
     width: 100%;
   }
+  .card-body {
+    padding: 7px 5px 0 !important;
+  }
   .graphic-image {
     width: 100%;
     height: auto;
     margin-bottom: 50px;
+  }
+  .legend-graphic {
+    flex-direction: column;
+    margin-left: 20px;
   }
   .main-page .tickets-tasks {
     flex-direction: column;
