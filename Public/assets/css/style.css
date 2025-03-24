@@ -248,9 +248,6 @@ main {
   border-right: none;
   padding: 17.5px;
 }
-.main-page .tickets-tasks .card-ticket .list-group-item:hover span {
-  color: #3751FF !important;
-}
 .main-page .tickets-tasks .card-ticket .list-group-item:hover svg rect {
   fill: #3751FF !important;
 }
@@ -402,7 +399,7 @@ main {
   .title_D {
     font-size: 18px !important;
   }
-  .card-title {
+  .main-page .row .col-3 .card .card-body .card-title {
     font-size: 8px !important;
   }
   .text-muted {
@@ -424,7 +421,7 @@ main {
     width: auto;
   }
   .header-default {
-    gap: 40px;
+    width: 95% !important;
   }
   .subheader-icons {
     gap: 10px !important;
@@ -446,6 +443,10 @@ main {
   }
   .col-md-4 {
     width: 100%;
+  }
+  .col-md-8 {
+    border: none !important;
+    padding: 0 !important;
   }
   .card-body {
     padding: 7px 5px 0 !important;
